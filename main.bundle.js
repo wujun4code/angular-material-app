@@ -133,7 +133,14 @@ RoutingModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css":
+/***/ "../../../../../src/app/app.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<router-outlet></router-outlet>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
@@ -141,20 +148,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"app.component.css","sourceRoot":""}]);
+exports.push([module.i, ".mat-sidenav-content::-webkit-scrollbar, body::-webkit-scrollbar, md-sidenav.sidenav::-webkit-scrollbar {\n  height: 6px;\n  width: 6px; }\n\n.mat-sidenav-content::-webkit-scrollbar-trac, body::-webkit-scrollbar-track, md-sidenav.sidenav::-webkit-scrollbar-trac {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }\n\n.mat-sidenav-content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, md-sidenav.sidenav::-webkit-scrollbar-thumb {\n  background-color: #6e6e6e;\n  outline: 1px solid #333; }\n", "", {"version":3,"sources":["E:/github/angular2-material2-bootstrap4-admin-app/src/app/E:/github/angular2-material2-bootstrap4-admin-app/src/app/app.component.scss"],"names":[],"mappings":"AAAA;EACE,YAAW;EACX,WACF,EAAE;;AAEF;EACE,qDAAgD,EACjD;;AAED;EACE,0BAAyB;EACzB,wBACF,EAAE","file":"app.component.scss","sourcesContent":[".mat-sidenav-content::-webkit-scrollbar,body::-webkit-scrollbar,md-sidenav.sidenav::-webkit-scrollbar {\r\n  height: 6px;\r\n  width: 6px\r\n}\r\n\r\n.mat-sidenav-content::-webkit-scrollbar-trac,body::-webkit-scrollbar-track,md-sidenav.sidenav::-webkit-scrollbar-trac {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)\r\n}\r\n\r\n.mat-sidenav-content::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb,md-sidenav.sidenav::-webkit-scrollbar-thumb {\r\n  background-color: #6e6e6e;\r\n  outline: 1px solid #333\r\n}\r\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/app.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -183,7 +183,7 @@ AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+        styles: [__webpack_require__("../../../../../src/app/app.component.scss")],
         providers: [__WEBPACK_IMPORTED_MODULE_1__customizer_customizer_service__["a" /* CustomizerService */]]
     })
 ], AppComponent);
@@ -8747,7 +8747,7 @@ var _a;
 var environment = {
     production: true,
     amapApi: 'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91',
-    navigationApi: 'http://127.0.0.1:8360/api',
+    navigationApi: 'http://stbui.com:8360/api',
     todoApi: 'http://127.0.0.1:8360/api',
     mailApi: 'http://127.0.0.1:3000',
     chatsApi: 'http://127.0.0.1:8360/api'

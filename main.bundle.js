@@ -622,9 +622,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// test
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryChatDbService } from './chats.data';
 
 
 
@@ -644,7 +641,7 @@ ChatsModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MaterialModule */],
-            __WEBPACK_IMPORTED_MODULE_5_angular2_perfect_scrollbar__["PerfectScrollbarModule"].forRoot(perfectScrollbarConfig),
+            __WEBPACK_IMPORTED_MODULE_5_angular2_perfect_scrollbar__["PerfectScrollbarModule"].forRoot(perfectScrollbarConfig)
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7__chats_component__["a" /* ChatsComponent */],
@@ -684,17 +681,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ChatsService = (function () {
     function ChatsService(http) {
         this.http = http;
-        this.api = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].chatsApi + '/chats';
+        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].chatsApi;
         this.header = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
     }
     ChatsService.prototype.addChat = function (chat) {
-        var url = this.api + "/" + chat.name;
+        var url = this.apiUrl;
         return this.http
             .post(url, JSON.stringify(chat), { headers: this.header })
             .map(function (res) { return res.json(); });
     };
     ChatsService.prototype.getChats = function () {
-        return this.http.get(this.api).map(function (res) { return res.json(); });
+        var url = this.apiUrl;
+        return this.http.get(url).map(function (res) { return res.json(); });
     };
     return ChatsService;
 }());
@@ -6422,6 +6420,9 @@ var NavigationService = (function () {
         if (topicId === void 0) { topicId = ''; }
         if (page === void 0) { page = 1; }
         var url = this.apiUrl + "/links/?topicId=" + topicId + "&page=" + page;
+        if (!__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
+            url = this.apiUrl + "/links" + topicId + page + ".json";
+        }
         this.http.get(url)
             .map(function (res) { return res.json(); })
             .subscribe(function (res) {
@@ -6430,6 +6431,9 @@ var NavigationService = (function () {
     };
     NavigationService.prototype.getCategorys = function () {
         var url = this.apiUrl + "/topic";
+        if (!__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production) {
+            url = this.apiUrl + "/topic.json";
+        }
         return this.http.get(url)
             .map(function (res) { return res.json(); });
     };
@@ -9304,7 +9308,7 @@ RoutingModule = __decorate([
 /***/ "../../../../../src/app/todo/todo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div fxlayout=\"column\" class=\"todo mat-elevation-z2\">\r\n  <div class=\"todo-header\"><h1>Todos</h1></div>\r\n  <app-todo-header placeholder=\"请输入您要完成的任务\" (onEnterUp)=\"addTodo($event)\"></app-todo-header>\r\n  <app-todo-list\r\n  [todos]=\"todos | async\"\r\n  (onToggleAll)=\"toggleAll()\"\r\n  (onRemoveTodo)=\"removeTodo($event)\"\r\n  (onToggleTodo)=\"toggleTodo($event)\" ></app-todo-list>\r\n  <app-todo-footer\r\n  [itemCount]=\"todos | async\"\r\n  (onClear)=\"clearCompleted()\"></app-todo-footer>\r\n</div>\r\n"
+module.exports = "<div fxlayout=\"column\" class=\"todo mat-elevation-z2\">\r\n  <div class=\"todo-header\"><h1>Todos</h1></div>\r\n  <app-todo-header placeholder=\"请输入您要完成的任务\" (onEnterUp)=\"addTodo($event)\"></app-todo-header>\r\n  <app-todo-list\r\n  [todos]=\"todos | async\"\r\n  (onToggleAll)=\"toggleAll()\"\r\n  (onRemoveTodo)=\"removeTodo($event)\"\r\n  (onToggleTodo)=\"toggleTodo($event)\" ></app-todo-list>\r\n  <app-todo-footer\r\n  [itemCount]=\"(todos | async)?.length\"\r\n  (onClear)=\"clearCompleted()\"></app-todo-footer>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -9425,9 +9429,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// test
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryTodoDbService } from './todo.data';
 
 
 
@@ -9447,7 +9448,7 @@ TodoModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MaterialModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_flex_layout__["a" /* FlexLayoutModule */],
-            __WEBPACK_IMPORTED_MODULE_6__todo_routing_module__["a" /* RoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_6__todo_routing_module__["a" /* RoutingModule */]
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7__todo_component__["a" /* TodoComponent */],
@@ -9492,7 +9493,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TodoService = (function () {
     function TodoService(http) {
         this.http = http;
-        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].todoApi + '/todos';
+        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].todoApi;
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
         this.dataStore = { todos: [] };
         this._todos = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
@@ -9609,8 +9610,8 @@ var environment = {
     amapApi: 'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91',
     navigationApi: 'http://stbui.com:8360/api',
     todoApi: 'http://127.0.0.1:8360/api',
-    mailApi: 'http://127.0.0.1:3000',
-    chatsApi: 'http://127.0.0.1:8360/api'
+    mailApi: '/assets/data/mail/list.json',
+    chatsApi: '/assets/data/chats/list.json'
 };
 //# sourceMappingURL=environment.js.map
 

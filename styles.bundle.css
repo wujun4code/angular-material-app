@@ -2555,6 +2555,14 @@ input.mat-input-element:-webkit-autofill + .mat-input-placeholder .mat-placehold
  * This mixin contains shared option styles between the select and
  * autocomplete components.
  */
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2704,99 +2712,6 @@ input.mat-input-element:-webkit-autofill + .mat-input-placeholder .mat-placehold
   .nav-title a:hover {
     color: rgba(63, 81, 181, 0.9); }
 
-/* -- Material Design Table style -------------- */
-.table {
-  width: 100%;
-  max-width: 100%;
-  background-color: #fff;
-  border-spacing: 0; }
-  .table > thead > tr,
-  .table > tbody > tr,
-  .table > tfoot > tr {
-    transition: all .3s ease; }
-    .table > thead > tr > th,
-    .table > thead > tr > td,
-    .table > tbody > tr > th,
-    .table > tbody > tr > td,
-    .table > tfoot > tr > th,
-    .table > tfoot > tr > td {
-      text-align: left;
-      padding: 16px;
-      vertical-align: middle;
-      border-top: 0;
-      transition: all .3s ease; }
-  .table > thead > tr > th {
-    font-weight: 400;
-    color: #757575;
-    vertical-align: bottom;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-  .table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td {
-    border-top: 0; }
-  .table > tbody + tbody {
-    border-top: 1px solid rgba(0, 0, 0, 0.12); }
-  .table .table {
-    background-color: #fff; }
-  .table .no-border {
-    border: 0; }
-
-.table-condensed > thead > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > th,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > th,
-.table-condensed > tfoot > tr > td {
-  padding: 8px; }
-
-.table-bordered {
-  border: 0; }
-  .table-bordered > thead > tr > th,
-  .table-bordered > thead > tr > td,
-  .table-bordered > tbody > tr > th,
-  .table-bordered > tbody > tr > td,
-  .table-bordered > tfoot > tr > th,
-  .table-bordered > tfoot > tr > td {
-    border: 0;
-    border-bottom: 1px solid #e0e0e0; }
-  .table-bordered > thead > tr > th,
-  .table-bordered > thead > tr > td {
-    border-bottom-width: 2px; }
-
-.table-striped > tbody > tr:nth-child(even) > td,
-.table-striped > tbody > tr:nth-child(even) > th {
-  background-color: #f5f5f5; }
-
-.table-hover > tbody > tr:hover > td,
-.table-hover > tbody > tr:hover > th {
-  background-color: rgba(0, 0, 0, 0.12); }
-
-.table-striped.table-mc-red > tbody > tr:nth-child(odd) > td,
-.table-striped.table-mc-red > tbody > tr:nth-child(odd) > th {
-  background-color: #fde0dc; }
-
-.table-hover.table-mc-red > tbody > tr:hover > td,
-.table-hover.table-mc-red > tbody > tr:hover > th {
-  background-color: #f9bdbb; }
-
-@media screen and (max-width: 767px) {
-  .table-responsive-vertical .table-striped.table-mc-red > tbody > tr > td,
-  .table-responsive-vertical .table-striped.table-mc-red > tbody > tr:nth-child(odd) {
-    background-color: #fff; }
-  .table-responsive-vertical .table-striped.table-mc-red > tbody > tr > td:nth-child(odd) {
-    background-color: #fde0dc; }
-  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr:hover > td,
-  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr:hover {
-    background-color: #fff; }
-  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr > td:hover {
-    background-color: #f9bdbb; } }
-
-.table-grey-header thead {
-  background-color: #EEEEEE; }
-
 html, body {
   margin: 0;
   padding: 0;
@@ -2817,43 +2732,6 @@ div {
 md-sidenav-container {
   height: 100%; }
 
-h3 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.005em; }
-
-pre {
-  margin: 0; }
-
-code {
-  white-space: pre; }
-
-h3, h4, h5, p {
-  margin: 0 0 16px; }
-
-h4 {
-  font-weight: 500;
-  color: #777777;
-  font-size: 18px; }
-
-p {
-  line-height: 1.5; }
-
-.inline {
-  display: inline-block;
-  padding: 0 0.5em;
-  white-space: normal;
-  vertical-align: text-bottom; }
-
-[md-prefix] > md-icon, [md-suffix] > md-icon {
-  font-size: 18px;
-  vertical-align: middle;
-  height: 16px;
-  width: 22px; }
-
-.subline {
-  color: #999999; }
-
 .avatar-flex {
   width: 40px;
   height: 40px;
@@ -2864,9 +2742,6 @@ p {
 .widget {
   margin: 12px; }
 
-.border-radius {
-  border-radius: 50%; }
-
 .avatar {
   width: 40px;
   min-width: 40px;
@@ -2875,32 +2750,20 @@ p {
   border-radius: 50%;
   text-align: center; }
 
-.middle {
-  vertical-align: middle; }
-
 .quickpanel .mat-tab-body-content,
 .quickpanel .mat-tab-body-wrapper,
 .quickpanel md-tab-body,
 .quickpanel md-tab-group {
   height: 100%; }
 
-.text-center {
-  text-align: center; }
-
-.pointer {
-  cursor: pointer; }
-
-.mt0 {
-  margin-top: 0 !important; }
-
-.mat-sidenav-content::-webkit-scrollbar, body::-webkit-scrollbar, md-sidenav.sidenav::-webkit-scrollbar {
+.mat-sidenav-content::-webkit-scrollbar, body::-webkit-scrollbar, md-sidenav.sidenav::-webkit-scrollbar, .main-container::-webkit-scrollbar {
   height: 6px;
   width: 6px; }
 
-.mat-sidenav-content::-webkit-scrollbar-trac, body::-webkit-scrollbar-track, md-sidenav.sidenav::-webkit-scrollbar-trac {
+.mat-sidenav-content::-webkit-scrollbar-trac, body::-webkit-scrollbar-track, md-sidenav.sidenav::-webkit-scrollbar-trac, .main-container::-webkit-scrollbar-trac {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
-.mat-sidenav-content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, md-sidenav.sidenav::-webkit-scrollbar-thumb {
+.mat-sidenav-content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, md-sidenav.sidenav::-webkit-scrollbar-thumb, .main-container::-webkit-scrollbar-thumb {
   background-color: #6e6e6e;
   outline: 1px solid #333; }
 

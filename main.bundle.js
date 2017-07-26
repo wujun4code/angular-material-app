@@ -9606,12 +9606,12 @@ var _a;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    production: true,
+    production: false,
     amapApi: 'http://webapi.amap.com/maps?v=1.3&key=5ca4be36897408ccfacadf90df1c5f91',
-    navigationApi: 'http://stbui.com:8360/api',
-    todoApi: '/assets/data/todo/list.json',
-    mailApi: '/assets/data/mail/list.json',
-    chatsApi: '/assets/data/chats/list.json'
+    navigationApi: '/angular2-material2-bootstrap4-admin-app/assets/data/navigation',
+    todoApi: '/angular2-material2-bootstrap4-admin-app/assets/data/todo/list.json',
+    mailApi: '/angular2-material2-bootstrap4-admin-app/assets/data/mail/list.json',
+    chatsApi: '/angular2-material2-bootstrap4-admin-app/assets/data/chats/list.json'
 };
 //# sourceMappingURL=environment.js.map
 

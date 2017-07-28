@@ -2555,162 +2555,111 @@ input.mat-input-element:-webkit-autofill + .mat-input-placeholder .mat-placehold
  * This mixin contains shared option styles between the select and
  * autocomplete components.
  */
-:host {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+.stbui-default {
+  background: #333C44;
+  color: rgba(0, 0, 0, 0.87); }
+  .stbui-default .sidenav-anchor {
+    color: #a1a1a1; }
+    .stbui-default .sidenav-anchor:hover {
+      color: #fafafa; }
+    .stbui-default .sidenav-anchor.active {
+      color: #fafafa; }
+  .stbui-default sidenav-item.open > .sidenav-anchor {
+    background-color: rgba(0, 0, 0, 0.1); }
+    .stbui-default sidenav-item.open > .sidenav-anchor:before {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent); }
 
-.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  -webkit-appearance: none; }
-  .pagination li {
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 14px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-weight: 500;
-    text-align: center;
-    height: 32px;
-    min-width: 32px;
-    padding: 0 8px;
-    margin: 0 8px;
-    line-height: 32px;
-    position: relative;
-    border-radius: 2px; }
-  .pagination-item-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+.logo-text {
+  color: rgba(0, 0, 0, 0.87); }
 
-.pagination-end {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+.stbui-white {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87); }
+  .stbui-white .sidenav-anchor {
+    color: #a1a1a1; }
+    .stbui-white .sidenav-anchor:hover {
+      color: #fafafa; }
+    .stbui-white .sidenav-anchor.active {
+      color: #fafafa; }
 
-.pagination-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+.logo-text {
+  color: #000; }
 
-/**
- * Applies styles for users in high contrast mode. Note that this only applies
- * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`
- * attribute, however Chrome handles high contrast differently.
- */
-/* Theme for the ripple elements.*/
-/** The mixins below are shared between md-menu and md-select */
-/**
- * This mixin adds the correct panel transform styles based
- * on the direction that the menu panel opens.
- */
-/* stylelint-disable material/no-prefixes */
-/* stylelint-enable */
-/**
- * This mixin contains shared option styles between the select and
- * autocomplete components.
- */
-:host {
-  display: block;
-  margin: 15px; }
+.stbui-primary {
+  background: #3f51b5;
+  color: #fff; }
+  .stbui-primary .sidenav-anchor {
+    color: #a1a1a1; }
+    .stbui-primary .sidenav-anchor:hover {
+      color: #a1a1a1; }
+    .stbui-primary .sidenav-anchor.active {
+      color: #fafafa; }
 
-.nav-title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden; }
-  .nav-title a {
-    text-decoration: none; }
+.logo-text {
+  color: #fff; }
 
-.nav-desc {
-  height: 150px;
-  min-height: 150px;
-  overflow: hidden; }
+.stbui-accent {
+  background: #ff4081;
+  color: #fff; }
+  .stbui-accent .sidenav-anchor {
+    color: #a1a1a1; }
+    .stbui-accent .sidenav-anchor:hover {
+      color: #a1a1a1; }
+    .stbui-accent .sidenav-anchor.active {
+      color: #fafafa; }
 
-.nav-category {
-  position: relative;
-  padding-left: 80px; }
+.logo-text {
+  color: #fff; }
 
-.nav-category-title {
-  margin: 0 0 15px;
-  position: absolute;
-  left: 10px;
-  border-bottom: none;
-  font-size: 14px;
-  line-height: 28px;
-  color: #333; }
+.stbui-warn {
+  background: #f44336;
+  color: #fff; }
+  .stbui-warn .sidenav-anchor {
+    color: #a1a1a1; }
+    .stbui-warn .sidenav-anchor:hover {
+      color: #a1a1a1; }
+    .stbui-warn .sidenav-anchor.active {
+      color: #fafafa; }
 
-.nav-category-item {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-  padding: 0 5px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  line-height: 28px;
-  cursor: default; }
+.logo-text {
+  color: #fff; }
 
 .pagination li {
   color: rgba(0, 0, 0, 0.87); }
+  .pagination li :hover {
+    background-color: rgba(63, 81, 181, 0.2); }
+  .pagination li:hover .active, .pagination li:hover.active,
+  .pagination li .active, .pagination li.active {
+    background-color: #3f51b5;
+    color: white; }
 
-.pagination li:hover {
-  background-color: rgba(63, 81, 181, 0.2); }
+.stb-date-display {
+  background-color: #3f51b5; }
 
-.pagination li:hover .active, .pagination li:hover.active,
-.pagination li .active, .pagination li.active {
-  background-color: #3f51b5;
-  color: #fff; }
+.stb-day-button-bg {
+  background-color: #3f51b5; }
+  .stb-day-button:hover .stb-day-button-bg,
+  .stb-day-button.hover .stb-day-button-bg {
+    opacity: 0.6; }
+
+.stb-day-button.now .stb-day-button-text {
+  background-color: #3f51b5; }
 
 .nav-category-item {
   color: rgba(0, 0, 0, 0.87); }
   .nav-category-item .active, .nav-category-item.active {
     background-color: #3f51b5;
-    color: #fff; }
+    color: white; }
   .nav-category-item:hover {
     background-color: rgba(63, 81, 181, 0.2); }
     .nav-category-item:hover .active, .nav-category-item:hover.active {
       background-color: #3f51b5;
-      color: #fff; }
+      color: rgba(0, 0, 0, 0.87); }
 
 .nav-title a {
   color: #3f51b5; }
   .nav-title a:hover {
-    color: rgba(63, 81, 181, 0.9); }
+    color: rgba(63, 81, 181, 0.8); }
 
 html, body {
   margin: 0;

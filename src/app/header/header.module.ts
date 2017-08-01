@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpModule } from '@angular/http';
 
 import { HeaderComponent } from './header.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
@@ -19,7 +20,8 @@ const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    HttpModule
   ],
   declarations: [
     HeaderComponent,

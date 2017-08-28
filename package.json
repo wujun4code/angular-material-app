@@ -2,16 +2,7 @@
   "name": "angular-material-app",
   "version": "0.4.5",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --environment=prod --extract-css --prod --aot",
-    "build:github": "ng build --environment=github --extract-css --prod --aot --base-href=https://stbui.github.io/angular-material-app/",
-    "publish:github": "ngh",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
+  "scripts": {},
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
@@ -27,12 +18,16 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "express": "^4.15.4",
     "hammerjs": "^2.0.8",
+    "leancloud-storage": "^3.1.0",
+    "leanengine": "^3.0.0",
     "markdown-it": "^8.3.1",
     "material-design-icons": "^3.0.1",
     "ng2-charts": "^1.6.0",
     "ngx-quill": "^1.3.5",
     "normalize.css": "^7.0.0",
+    "rx-lean-angular": "^0.4.9",
     "rxjs": "^5.4.1",
     "screenfull": "^3.3.1",
     "zone.js": "^0.8.14"
@@ -58,5 +53,8 @@
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
+  },
+  "engines": {
+    "node": "6.x"
   }
 }

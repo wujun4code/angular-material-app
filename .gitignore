@@ -40,3 +40,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+package-lock.json
+.leancloud/current_app_id
+.leancloud/current_group
+.leancloud/recent_linked_apps
